@@ -13,5 +13,7 @@ namespace WebApplication1
         public string Summary { get; set; }
 
         public string ClientIPAddr { get; set; }
+
+        public string LocalIp { get; set; }
 }
 }

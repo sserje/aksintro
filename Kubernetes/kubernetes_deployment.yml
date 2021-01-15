@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-aspnetcorev2-pod-deployment
+  labels:
+    app: api-aspnetcorev2
+spec:
+  replicas: 10
+  selector:
+    matchLabels:
+      app: api-aspnetcorev2
+  template:
+    metadata:
+      labels:
+        app: api-aspnetcorev2
+    spec:
+      containers:
+      - name: api-aspnetcorev2
+        image: sserje06/aksnetcore:v2
+        ports:
+        - containerPort: 80
