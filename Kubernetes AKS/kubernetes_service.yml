@@ -1,0 +1,12 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: api-aspnetcorev2-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: api-aspnetcorev2
+  ports:
+  - protocol: TCP
+    port: 4225
+    targetPort: 80
