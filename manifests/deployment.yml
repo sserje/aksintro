@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "uksqqbe002aks01-073a"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "uksqqbe002aks01-073a"
+  template:
+    metadata:
+      labels:
+        app: "uksqqbe002aks01-073a"
+    spec:
+      containers:
+        - name: "uksqqbe002aks01-073a"
+          image: "uksqqbe002crc01.azurecr.io/uksqqbe002aks01"
+          ports:
+          - containerPort: 80
